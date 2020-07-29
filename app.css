@@ -1,0 +1,60 @@
+.cubeWrapper {
+  width: 50vw;
+  height: 40vh;
+  perspective: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cubeWrapper .cube {
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(8deg) rotateY(0deg);
+  transition: all 0.5s;
+  animation: roll 20s infinite ease-in-out;
+}
+@keyframes roll {
+  from {
+    transform: rotateX(8deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(8deg) rotateY(360deg);
+  }
+}
+.side {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background: rgba(76, 83, 146, 0.548);
+  border: 0.5px solid rgba(48, 52, 92, 0.486);
+  text-align: center;
+  line-height: 3em;
+  box-shadow: inset 5px 5px 100px 20px rgba(59, 64, 114, 0.637);
+}
+.front {
+  transform: translateZ(2em);
+}
+.top {
+  transform: rotateX(90deg) translateZ(2em);
+}
+.right {
+  transform: rotateY(90deg) translateZ(2em);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(2em);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(2em);
+  box-shadow: 5px 5px 100px 20px rgba(45, 47, 78, 0.699);
+}
+.back {
+  transform: rotateY(-180deg) translateZ(2em);
+}
+img {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+}
+/** Template created by narayan neupane **/
